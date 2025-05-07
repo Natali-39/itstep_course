@@ -10,7 +10,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: blueviolet;
 }
+
 .wrapper {
     padding: 30px;
     border: 1px solid gold;
