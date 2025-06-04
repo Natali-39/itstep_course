@@ -1,0 +1,23 @@
+div{
+    margin: 150px auto;
+    width: 320px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.register input{
+    display: block;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+}
+.btn{
+    width: 100%;
+    border: none;
+    background-color:#1cbc11;
+    color:  #fff;
+
+
+}

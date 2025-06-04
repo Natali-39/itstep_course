@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- при добавлении в meta user-scalable-no  запрещает адаптировать -->
+    <title>Единицы измерения</title>
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+        html .body{
+            padding: 0;
+            margin: 0;
+        }
+        #block {
+            height: 100vh;
+            background-image: url("../../imeg/bg.webp");
+            background-repeat:no-repeat;
+            background-position: center center;
+            /* 50% 50% */
+            background-size: cover;
+            /* background-color: blueviolet; 
+            background-size: contain;*/
+            /* background: url("../../imeg/bg.webp") center center no-repeat ; 
+            background-size: cover;*/
+        }
+        #block2 {
+            width: 50%;
+            background-color: #c7f173a4;
+            margin-top: -15px
+        }
+        #block3{
+            width: 10rem;
+        }
+        .bordered{
+            border: 1px solid black;
+            margin-bottom: 15px;
+            height: 50px;
+        }
+        .container{
+           margin: 0 auto;
+           width: 1320px;
+           border: 1px solid black;
+           padding: 15px;
+        }
+        .container::after{
+            content: " ";
+            display: table;
+            clear: both;
+        }
+        .column{
+            width: 33.3333%;
+            border: 1px solid red;
+            padding: 15px;
+            /*display: inline-block;*/
+            float: left;
+        }
+        .column nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .column nav ul li a{
+            text-decoration: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: block;
+            border-bottom: 1px solid #d2cece;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="block"></div> 
+    <div id="block2" class="bordered"></div>
+    <div id="block3" class="bordered"></div>
+    <div class="container">
+        <div class="column">
+            <h3>Меню</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">ссылка1</a></li>
+                    <li><a href="#">ссылка2</a></li>
+                    <li><a href="#">ссылка3</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column">
+            <h1>заголовок</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quos quaerat fuga tenetur atque reprehenderit expedita labore aliquam, qui placeat hic possimus aut quidem, totam praesentium repellat similique magni recusandae.</p>
+        </div>
+        <div class="column">
+            <img src="" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
