@@ -1,0 +1,17 @@
+/* Ссылки пагинации */
+.pagination a {
+   color: rgb(202, 26, 26);
+   float: left;
+   padding: 8px 16px;
+   text-decoration: none;
+   transition: background-color .3s;
+}
+/*стили активной / текущуй ссвлки */
+.pagination a .active {
+    background-color: rgb(72, 150, 227);
+    color: #ffffff;
+}
+/*добавим серый фон при наведении мыши*/
+.pagination a:hover:not( .active) {
+    background-color: #f1f1f1;
+}
