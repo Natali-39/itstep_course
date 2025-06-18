@@ -1,0 +1,38 @@
+:root{
+    --color-white:#fff;
+}
+.logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-white);
+    font-size: 35px;
+}
+.menu {
+    position: absolute;
+    width: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    right: 30px;
+    top: 50%;
+    margin-top: -17px;
+}
+.menu hr {
+    border: none;
+    border-top: 2px solid var(--color-white);
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 15px 30px;
+}
+.lead {
+    height: 100vh;
+    background-image: url(https://sotni.ru/wp-content/uploads/2023/08/tekhnologichnyi-fon-238.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

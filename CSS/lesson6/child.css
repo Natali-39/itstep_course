@@ -1,0 +1,66 @@
+:root {
+    --color-black: #e65252;
+    --position: relative;
+    --size: 200px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.container div {
+    border: 2px solid var(--color-black);
+    width: var(--size, 100px);
+    height: var(--size, 100px);
+    /* border-bottom: none; */
+    border-radius: 50%;
+}
+/* как обратиться к последнем потомку*/
+.container div:last-child {
+    --color-black: blue;
+    border-bottom: 2px solid var(--color-black);
+    background-color: #33d857;
+}
+.container div:first-child {
+    background-color: #da3c3c;
+}
+.container div:nth-child(2) {
+    background-color: #f4f74d;
+}
+/* применяется к четному потомку 
+.container div:nth-child(even) {
+    border-radius: 0; 
+}*/
+/* применяется к нечетному потомку 
+.container div:nth-child(odd) {
+    position: relative;
+    left: 50px;
+}*/
+/* каждое умноженное на 2 */
+.container div:nth-child(2n) {
+   border-radius: 0; 
+}
+/* применяется к нечетному потомку */
+.container div:nth-child(2n-1) {
+    position: var(--position);
+    left: 50px;
+}
+/*все начиная со второго 
+.container div:nth-child(n+2) { 
+    display: inline-block;
+}*/
+/* с первого по 3ий */
+.container div:nth-child(-n+3) {
+    display: inline-block;
+}
+/* с 3 до последнего */
+.container div:nth-child(n+4) {
+    display: inline-block;
+}
