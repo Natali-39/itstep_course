@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 750px;
+}
+.table {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    /* collapse - чтоб схлопнуть граници в таблице */
+    border-collapse: collapse; 
+}
+.table thead tr th {
+    padding: 10px;
+    border-bottom: 1px solid #e4e2e2;
+    text-align: left;
+}
+.table tbody tr td {
+    padding: 10px;
+    border-bottom: 1px solid #e4e2e2;
+}
+.table tbody tr td:first-child {
+    font-weight: bold;
+    width: 50px;
+}
+.table tbody tr:nth-child(odd) td {
+    background-color: #f2f2f2;
+}

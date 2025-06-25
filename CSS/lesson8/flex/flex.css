@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+}
+/* flex контейнер, все что в него вложено, это flex-элементы */
+.container {
+    display: flex;
+    height: 100%;
+    width: 960px;
+    margin: 0 auto;
+    background-color: #888;
+    flex-direction: row;
+    /* расположение */
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 15px;
+}
+.container div {
+    padding: 30px;
+    border: 1px solid black;
+}
+.first {
+    background-color: #48c26c;
+}
+.second {
+    background-color: #ec90f5;
+}
+.third {
+    background-color: #68d5f7;
+}
+nav ul {
+    display: flex;
+
+}

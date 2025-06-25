@@ -70,7 +70,7 @@ body {
     margin: -15px 0 15px;
 }
 .remember label input {
-    accent-color: #fff;
+    border-color: #fff;
     margin-right: 3px;
 }
 .remember a {
