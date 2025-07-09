@@ -32,6 +32,7 @@ header .logo {
     color: white;
     font-size: 24px;
 }
+
 header nav a {
     color: #c5c4c4;
 }
@@ -45,7 +46,20 @@ header input {
     margin-left: auto;
 }
 header nav li ul {
-    display: none;
+    opacity: 0;
+    background-color:#fcfafa ;
+    border-radius: 7px;
+    border: 1px solid #f8f7f7;
+    width: 180px;
+    transition: all 0.3s ease-out;
+}
+.drop ul li a {
+    display: block;
+    padding: 5px 15px;
+    transition: all 0.2s linear;
+}
+.drop ul li a:hover {
+    background-color: #acacac;
 }
 header nav > ul {
     display: flex;
@@ -53,9 +67,37 @@ header nav > ul {
     gap: 15px;
     margin-left: 25px;
 }
- header nav ul li:hover ul{
-     display: block !important;
-} 
+.drop {
+    position: relative;
+}
+.drop ul {
+    position: absolute;
+    left: 0;
+    top: 150%;
+    overflow: hidden;
+    transform: translateY(-30px);
+}
+.drop:hover ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+.drop:hover > a:after {
+    transform: rotate(180deg);
+}
+.drop > a:after {
+    display: block;
+    width: 0;
+    content: " ";
+    border-top: 6px solid grey;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    transition: all 0.3s linear;
+}
+.drop > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 @media (max-width: 992px) {
     header nav {
