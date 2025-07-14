@@ -10,6 +10,7 @@ button {
     color: cornsilk;
     border-radius: 5px;
     cursor: pointer;
+    /* transition-property — свойство, которое хотим плавно изменить, transition-duration — длительность перехода, transition-timing-function — функция, описывающая скорость изменения свойства, transition-delay — задержка перед началом изменения. */
     transition: all 0.3s linear;
     /* transition: color,background-color */
 }
@@ -56,6 +57,7 @@ button:hover {
 }
 
 .transform.animated {
+    /* имя, время начало анимации, число повторений (infinite-бесконечно), нужен ли обратный порядок, развитие анимация между ключевыми кадрами, нужно ли применять стили ключевых кадров до или после проигрывания анимации, задержку воспроизведения анимации в s */
    animation:rot 1s 2 normal linear both 2s;
    width: 100px;
    height: 100px; 
