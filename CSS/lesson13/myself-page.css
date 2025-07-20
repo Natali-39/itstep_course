@@ -25,7 +25,7 @@ header {
 .slider {
     background-image: url(./Slider.jpg);
     background-color: #495644;
-    width: 100% !important;
+    width: 100%;
     height: 100vh;
     color: white;
     background-size: cover;
@@ -62,7 +62,7 @@ h1 {
     margin-top: 24px;
     margin-bottom: 0;
 }
-.slider a {
+.slider div a {
     color: #FFD723;
     text-decoration: underline;
     font-size: 16px;
@@ -86,6 +86,8 @@ main .Evaluation {
     justify-content: space-between;
 }
 main .Evaluation div {
+    display: flex;
+    flex-direction: column;
     width: 255px;
     height: 309px;
     padding-top: 27px;
@@ -93,3 +95,104 @@ main .Evaluation div {
     padding-left: 30px;
 
 }
+main .Evaluation h4 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 34px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+main .Evaluation p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    margin-bottom: auto
+}
+main .Evaluation .linkevaluation {
+    color: #FFD723;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+.layer {
+    /* max-width: 1110px; 
+    width: 100%;
+    margin:0 auto;*/
+    margin-top: 154px;
+    /* width: 1110px; */
+    height: 362px;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+main .layer .let {
+    width: 822px;
+}
+main .layer .let h2 {
+    font-size: 60px;
+    line-height: 74px;
+    margin: 0; 
+    margin-bottom: 50px;
+}
+main .layer .let a {
+    color: #D4D6D4;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: normal;
+}
+footer {
+    background-image: url(./Bg.jpg);
+    background-color: #495644;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-size: cover;
+}
+footer .bottom {
+    padding-top: 310px;
+}
+footer .contact {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 52px;
+}
+footer .contact div {
+    width: 226px;
+}
+footer .contact div p {
+    font-size: 16px;
+    color: #B6C197;
+}
+footer .contact div a {
+    color: white;
+    font-weight: bold;
+}
+footer .contact div .ad {
+    color: white;
+    font-weight: bold;
+}
+footer .describtion {
+    width: 1110px;
+    display: flex;
+    border-top: 1px solid #B6C197;
+    gap: 70px;
+    justify-content: space-between;
+}
+footer .describtion .menu {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .describtion .menu div {
+    display: flex;
+    flex-direction: column;
+}
+footer .describtion .menu h5 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+    
