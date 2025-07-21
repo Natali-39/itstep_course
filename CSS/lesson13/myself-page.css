@@ -69,6 +69,11 @@ h1 {
     font-weight: bold;
     margin-top: 45px;
 }
+main .blog {
+    max-width: 1110px;
+    width: 100%;
+    margin:0 auto;
+}
 main .Deation {
     margin-top: 150px;
     width: 607px;
@@ -93,7 +98,6 @@ main .Evaluation div {
     padding-top: 27px;
     padding-right: 42px;
     padding-left: 30px;
-
 }
 main .Evaluation h4 {
     margin: 0;
@@ -117,17 +121,18 @@ main .Evaluation .linkevaluation {
     margin-bottom: 36px;
 }
 .layer {
-    /* max-width: 1110px; 
+    max-width: 1110px; 
     width: 100%;
-    margin:0 auto;*/
+    margin:0 auto;
     margin-top: 154px;
-    /* width: 1110px; */
     height: 362px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    margin-bottom: -181px;
+    opacity: 0.99;
 }
 main .layer .let {
     width: 822px;
@@ -148,12 +153,15 @@ footer {
     background-image: url(./Bg.jpg);
     background-color: #495644;
     width: 100%;
-    height: 100vh;
-    color: white;
+    height: 100vh; 
     background-size: cover;
 }
 footer .bottom {
     padding-top: 310px;
+    max-width: 1110px;
+    width: 100%;
+    height: 100vh;
+    margin:0 auto;
 }
 footer .contact {
     display: flex;
@@ -179,7 +187,6 @@ footer .describtion {
     width: 1110px;
     display: flex;
     border-top: 1px solid #B6C197;
-    gap: 70px;
     justify-content: space-between;
 }
 footer .describtion .menu {
@@ -191,8 +198,42 @@ footer .describtion .menu div {
     display: flex;
     flex-direction: column;
 }
-footer .describtion .menu h5 {
+footer .describtion h5 {
     font-size: 16px;
     text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 21px;
+    color: white;
+}
+footer .describtion .menu a {
+    line-height: 40px;
+    font-size: 16px;
+    color: #B6C197;
+}
+footer .describtion .email p {
+    font-size: 16px;
+    color: #B6C197;
+    line-height: 26px;
+}
+footer .describtion .email a {
+    margin-top: 23px;
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+    color: white;
+}
+footer .logobottom {
+    display: flex;
+    margin-top: 60px;
+    border-top: 1px solid #B6C197;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+footer .logobottom p {
+    font-size: 14px;
+    font-weight: normal;
+    color: #B5C096;
+    line-height: 100%;
 }
     
