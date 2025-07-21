@@ -16,8 +16,12 @@ let result = convertor * MILE_OF_KM;
 alert(`конвертируется в мили ${result}`); */
 
 // Task 8
-let userNumber = +prompt('введите трехзначное число');
+// let userNumber = +prompt('введите трехзначное число');
 
 
+
+// Task 10
+let all_sales = +prompt ("введите сумму продаж за месяц");
+alert (all_sales / 100 * 10 + 250);
 
 

@@ -74,8 +74,5 @@ let parameters = {};
 alert(typeof hugeNumber); 
 */
 
-let age = prompt('введите свой возрост');
-alert(`ваш возрост ${age} лет');
-
-let result = confirm('Вам уже есть 18 лет?');
-alert(result);
+/*let age = prompt('введите свой возрост');
+alert(`ваш возрост ${age} лет');*/
