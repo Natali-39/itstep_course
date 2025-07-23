@@ -178,3 +178,17 @@ switch (action) {
     default:
         console.log('такая операция не поддерживается')
 }
+
+// Task 1.1 тернарный оператор
+let n = 5;
+let m = 10;
+
+console.log ((m > n )? m: n);
+
+//task 1.2
+let number = 16;
+console.log ((number % 5 == 0)? true:false);
+
+//task 1.3
+let namePlanet = "Земля";
+console.log ((namePlanet == "Земля") || (namePlanet == "земля")? "Привет,землянин!": 'Привет, инопланетянин!');
