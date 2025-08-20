@@ -149,3 +149,4 @@ ladder.down();
 ladder.showStep(); // 1
 ladder.down();
 ladder.showStep(); // 0
+
