@@ -26,19 +26,20 @@ class HTMLElement {
         this.style[name] = value;
     }
 
-    getStyliesList() {
+    getStylesList() {
         // проходит по всем ключам
-        let style = ``
+        let styles = ``;
+
         for(let key of Object.keys(this.style)) {
             let styleName = key;
             let styleValue = this.style[key];
 
             let styleString = `${styleName}:${styleValue};`;
 
-            style += styleString;
+            styles += styleString;
         }
 
-        return style ? ` style="${style}"` : ``;
+        return styles ? ` style="${styles}"` : ``;
     }
 
     getClassList() {
@@ -46,7 +47,7 @@ class HTMLElement {
     }
 
     renderHTML() {
-        return `<${this.name}${this.getClassList()}${this.getStyliesList()}></${this.name}>`;
+        return `<${this.name}${this.getClassList()}${this.getStylesList()}></${this.name}>`;
     }
 
     drawHTML() {
@@ -90,3 +91,5 @@ div.drawHTML();
 
 const a = new HTMLHrefElement (`https://google.com`);
 a.id = `external_link`;
+
+console.log(a.renderHTML());
