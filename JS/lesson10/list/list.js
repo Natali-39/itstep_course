@@ -15,7 +15,7 @@ while(text = prompt(`введите значение для пункта спи�
 
 
 // TASK 2
-/*let data = {
+let data = {
     "Рыбы": {
         "форель": {},
         "лосось": {}
@@ -33,7 +33,27 @@ while(text = prompt(`введите значение для пункта спи�
 };
 
 let div = document.getElementById("root");
+// методом рекурсии
+function newCreateTree (container, data) {
+    let ul = document.createElement("ul");
 
+    for(let key in data) {
+        let li = document.createElement("li");
+        li.innerText = key;
+
+        if(data[key]) {
+            newCreateTree(li, data[key]); 
+        }
+
+        ul.append(li);
+    }
+
+    container.append(ul);
+}
+
+newCreateTree(div, data);
+
+// методом без рекурсии
 function createTree(container, data){
     let ul = document.createElement("ul");
 
@@ -74,12 +94,12 @@ function createTree(container, data){
     container.append(ul);
 }
 
-createTree(div, data);*/
+createTree(div, data);
 
 
 
 // TASK 3 
-function showNotification(options) {
+/*function showNotification(options) {
     let div = document.createElement("div");
 
     div.classList.add("notification");
@@ -125,4 +145,4 @@ function randomInteger(min, max) {
     return Math.floor(rand);
 }
 
-setInterval(notify, 1000);
+setInterval(notify, 1000);*/
