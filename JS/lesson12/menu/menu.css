@@ -1,0 +1,69 @@
+.main {
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    background-color: #3a5544;
+    display: flex;
+    align-items: center;
+    padding:0 20px;
+}
+.main .logo {
+    display: block;
+
+}
+.main .logo > a {
+    font-size: 45px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a {
+    color: #f0fff7;
+    text-decoration: none;
+}
+.sandwich {
+    width: 45px;
+    height: 40px;
+    border-radius: 5px;
+    border: transparent;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+.sandwich span {
+    background-color: #f0fff7;
+    height: 2px;
+    width: 25px;
+    display: block;
+}
+   
+nav {
+    position: fixed;
+    top: 95px;
+    right: 0;
+    height: 100vh;
+    background-color: #3a5544;
+    transform: translateX(100%);
+}
+.menu {
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+}
+.menu div a {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
