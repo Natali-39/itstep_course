@@ -39,7 +39,9 @@ a {
     width: 25px;
     display: block;
 }
-   
+.opened {
+    transform: translateX(0);
+}   
 nav {
     position: fixed;
     top: 95px;
