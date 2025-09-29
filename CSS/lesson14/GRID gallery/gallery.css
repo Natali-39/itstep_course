@@ -1,0 +1,43 @@
+#gallery {
+    display: grid;
+    gap: 5px;
+    height: 100vh;
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
+}
+
+#gallery .header {
+    grid-area: 1 / 1 / 2 / 4;
+    color: white;
+    background-color: #43854e;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#gallery img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#gallery a {
+    position: relative;
+}
+
+#gallery a:after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease-out;
+}
+#gallery a:hover:after {
+    opacity: 0.7;
+}
