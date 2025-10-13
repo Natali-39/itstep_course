@@ -9,6 +9,8 @@
     --color-gray: #899D9D;
     --color-red: #E24949;
     --color-green-hover: #91AC46;
+    --color-green-text: #1D2F30;
+    --color-green-focus: #83A440;
 
     --transition: all 0.2s linear;
 }
@@ -93,7 +95,11 @@ header {
     padding-top: 175px;
     padding-bottom: 115px;
 }
-#main-banner::after{
+.shadowed-bg {
+    position: relative;
+
+}
+.shadowed-bg::after{
     content: " ";
     display: block;
     opacity: 0.7;
@@ -104,6 +110,11 @@ header {
     width: 100%;
     height: 100%;
 }
+.shadowed-bg .container{
+    z-index: 5;
+    position: relative;
+}
+
 #main-banner .container {
     z-index: 5;
     position: relative;
@@ -127,15 +138,15 @@ header {
     fill: var(--color-green-hover);
 }
 #main-banner a:focus,
- #main-banner a:focus svg path {
+#main-banner a:focus svg path {
     color: var(--color-green-active);
     fill: var(--color-green-active);
 }
-#main-banner a svg {
+a.arrowed svg {
     transition: var(--transition);
 }
-#main-banner a:hover svg,
-#main-banner a:focus svg  {
+a.arrowed:hover svg,
+a.arrowed:focus svg  {
     width: 51px;
     height: 16px;
 }
@@ -229,4 +240,99 @@ header {
 .slider-nav button {
     background: none;
     border: none;
+}
+.block-header {
+    font-style: italic;
+    color: var(--color-white);
+    font-size: 48px;
+    line-height: 100%;
+    margin-bottom: 30px;
+}
+.article-preview {
+    background-color: var(--color-green);
+    padding: 16px;
+    padding-bottom: 24px;
+}
+.article-preview h3 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-green-text);
+}
+.article-preview a {
+    color: var(--color-bg-shade);
+    font-weight: 700;
+}
+.article-preview a:hover {
+    color: var(--color-green-active);
+}
+.article-preview a svg path {
+    transition: var(--transition);
+}
+.article-preview a:hover svg path {
+    fill: var(--color-green-active);
+}
+#articles {
+    padding-bottom: 60px;
+}
+#contact-form {
+    background-image: url(../images/contact-form.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.contact-form p{
+    color: var(--color-white);
+}
+#contact-form .block-header {
+    margin-bottom: 16px;
+}
+.contact-form .col-4 form{
+    gap: 24px;
+}
+.contact-form .form-control {
+    border-radius: 0;
+    height: 40px;
+}
+.contact-form button.button {
+    background-color: var(--color-green);
+    font-weight: 700;
+    color: var(--color-bg-shade);
+    align-self: flex-start;
+    transition: var(--transition);
+}
+.contact-form button.button:hover {
+    background-color: var(--color-green-hover);
+    border-color: var(--color-green-hover);
+}
+
+/*.contact-form .form-control:hover {
+    background: var(--color-gray);
+    border-color: var(--color-gray);
+    color: var(--color-white);
+}
+.contact-form .form-control:hover::placeholder{
+    color: var(--color-white);
+}
+.contact-form .form-control:hover::-moz-placeholder{
+    color: var(--color-white);
+}
+.contact-form .form-control:hover::-webkit-input-placeholder{
+    color: var(--color-white);
+}*/
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    outline-width: 1px;
+    outline-color: var(--color-green-focus);
+    outline-style: solid;
+    outline-offset: 2px;
+    border-radius: 0;
+}
+.contact-form .form-control ~ .invalid-feedback {
+    display: none;
+}
+.contact-form .form-control.is-invalid ~ .invalid-feedback {
+    display: block;
 }
