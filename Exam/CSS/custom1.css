@@ -8,6 +8,8 @@
     --color-body: #4F4F4F;
     --color-divider: #D9D9D9;
     --color-white: #FFFFFF;
+
+    --transition: all 0.3s linear;
 }
 body {
     font-family: var(--font-source-serif);
@@ -48,9 +50,6 @@ header .logo {
     font-weight: 300;
     margin-bottom: 39px;
 }
-.skills {
-
-}
 h5 {
     text-decoration: underline;
     font-weight: normal;
@@ -75,6 +74,14 @@ h1 {
     font-size: 16px;
     border: 1px solid var(--color-headline2);
     padding: 1px 8px;
+}
+.block-name1 a:hover, .block-name2 a:hover,
+.block-name3 a:hover, .block-name4 a:hover,
+.block-name5 a:hover, .last-text a:hover {
+    color: var(--color-white);
+    border: 1px solid var(--color-black);
+    background-color: var(--color-black);
+    transition: var(--transition);
 }
 .image-yoga {
     background-image: url(../images/yoga.jpg);
@@ -139,7 +146,7 @@ h1 {
     padding: 1px 8px;
 }
 .image-capital {
-    background-image: url(../images/magazine.jpg);
+    background-image: url(../images/capital.jpg);
     background-size: cover;
     width: 565px;
     height: 565px;
@@ -162,4 +169,98 @@ h1 {
     line-height: 120%;
     letter-spacing: -4.5%;
     font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 120px;
 }
+.last-text a {
+    color: var(--color-black);
+    font-size: 16px;
+    border: 1px solid var(--color-black);
+    padding: 1px 8px;
+    margin-top: 50px;
+    line-height: 103%;
+}
+footer .social {
+    padding-top: 30px;
+    padding-bottom: 150px;
+}
+footer .social a:first-child {
+    color: var(--color-headline3);
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: -4.5%;
+    font-weight: 300;
+    text-decoration: underline;
+}
+footer .social a:nth-child(2) {
+    color: var(--color-headline5);
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: -4.5%;
+    font-weight: 300;
+    text-decoration: underline;
+}
+footer .social a:last-child {
+    color: var(--color-headline2);
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: -4.5%;
+    font-weight: 300;
+    text-decoration: underline;
+}
+footer p {
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: -4.5%;
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+@media (max-width: 992px) {
+    h5 {
+        font-size: 14px;
+    }
+    h1, .last-text, footer p {
+        font-size: 36px;
+        line-height: 125%;
+    }
+    .last-text {
+        width: 100%;
+    }
+    .images {
+        width: 325px;
+        height: 325px;
+    }
+    .social a {
+        font-size: 36px !important;
+        line-height: 125%;
+    }
+}
+@media (max-width: 768px) {
+    h5 {
+        font-size: 12px;
+    }
+    h1, .last-text, footer p {
+        font-size: 28px;
+        line-height: 135%;
+    }
+    .main-text {
+        font-size: 36px;
+        line-height: 125%;
+    }
+    .block {
+        flex-direction: column;
+    }
+    .social {
+        gap: 40px;
+        flex-direction: column !important;
+        font-size: 28px !important;
+        line-height: 125%;
+    }
+}
+
+
+/* @media(max-width: 799px) { 
+    .column p {
+        font-size: 14px;
+    }
+}*/
