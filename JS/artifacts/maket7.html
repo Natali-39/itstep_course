@@ -196,7 +196,7 @@
                         <p>Равным образом, экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения прогресса профессионального сообщества. Как принято считать, элементы политического процесса рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. </p>
                     </div>
                     <div class="col-4 d-flex flex-column">
-                        <form action="" class="d-flex flex-column" onsubmit="return validate()">
+                        <form action="" class="d-flex flex-column" onsubmit="return validate()" novalidate>
                             <div>
                                 <input type="text" class="form-control" placeholder="Имя">
                                 <div class="invalid-feedback">
@@ -270,22 +270,32 @@
     <div class="modal fade" id="login-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5">Войти в личный кабинет</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Войти</button>
-                </div>
+                <form action="" id="form-login" novalidate>
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5">Войти в личный кабинет</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control mb-1" placeholder="Логин" name="login" required minlength="2">
+                        <div class="invalid-feedback">
+                            Некорректный логин.
+                        </div>
+                        <input type="password" class="form-control" placeholder="Пароль" name="password" required minlength="8">
+                        <div class="invalid-feedback">
+                            Пароль слишком кароткий.
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <script src="../lesson14/bootstrap/bootstrap.min.js"></script>
     <script src="./js/Jquery/jquery-3.7.1.min.js"></script>
+    <script src="./js/jqueryValidate/jquery.validate.min.js"></script>
     <script src="./js/owl_carousel/owl.carousel.min.js"></script>
     <script src="./js/custom.js"></script>
 </body>
