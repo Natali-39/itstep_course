@@ -1,0 +1,43 @@
+@import 'vars';
+@import "normalize";
+@import 'body';
+@import 'mixins';
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include transform(translateX(50px));
+
+    li {
+        a {
+            text-decoration: none;
+        }
+        &:first-child {
+            a {
+                color: cornflowerblue;
+            }
+        }
+    }
+}
+%display_flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%message-shared {
+    width: 200px;
+    height: 200px;
+}
+
+.block {
+    @extend %message-shared;
+    background-color: deepskyblue;
+    @include transform(rotate(30deg));
+}
+.blue-block {
+    @extend %display_flex_center;
+    @extend %message-shared;
+    background-color: khaki;
+}
