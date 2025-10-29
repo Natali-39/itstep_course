@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import showAlert from './alert';
+//import showAlert from './alert';
+import '../scss/index.scss';
 
 function component() {
     const element = document.createElement('div');
