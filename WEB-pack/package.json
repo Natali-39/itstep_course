@@ -4,8 +4,7 @@
   "description": "webpack test application",
   "license": "ISC",
   "author": "Natali Savchenko <NataNiks39@gmail.com>",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "index.js", 
   "scripts": {
     "build": "npx webpack build",
     "dev": "npx webpack --watch"

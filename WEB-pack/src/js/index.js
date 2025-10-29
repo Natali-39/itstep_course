@@ -1,6 +1,5 @@
-const _ = require('lodash');
-const $ = require('jquery');
-const alertModule = require('./alert.js');
+import _ from 'lodash';
+import showAlert from './alert';
 
 function component() {
     const element = document.createElement('div');
@@ -10,7 +9,6 @@ function component() {
     return element;
 }
   
-document.body.appendChild(component());
+document.body.appendChild(component())
 
-//$(`body`).css({backgroundColor: "pink"});
-alertModule.myFunction(`this is alert`);
+// в package.json удалить type
