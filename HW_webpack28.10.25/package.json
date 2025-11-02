@@ -4,7 +4,8 @@
   "description": "this page color change",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "dev": "npm webpack --watch"
   },
   "author": "Natali Savchenko <nataniks39@gmail.com>",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "lodash": "^4.17.21"
   }
 }
