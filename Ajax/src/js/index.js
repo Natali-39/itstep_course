@@ -23,8 +23,19 @@ setInterval(() => {
 }, 5000)
 
 function renderBeerCard(beer) {
-    document.body.innerHTML = `<img style="width:200px" src="https://punkapi.online/v3/images/${beer.image}" alt="${beer.name}"/> <p>${beer.name}</p>`;
-    
-    //document.body.innerText = `https://punkapi.online/v3/${beer.name}`;
-    
+     document.body.innerHTML = `
+        <div>
+            <img style="width:200px" src="https://punkapi.online/v3/images/${beer.image}" alt="${beer.name}"
+            <h2>${beer.name}</h2>
+            <p>${beer.tagline}</p>
+            <p>${beer.first_brewed}</p>
+            <p>${beer.description}</p>
+            <p> ABV: ${beer.abv}%</p>
+        </div>    
+    `;
+
 }
+
+window.onload = function() {
+    renderBeerCard(beer); 
+};
