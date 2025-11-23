@@ -5,9 +5,14 @@ class Element {
         this.id = null;
         this.children = [];
         this.css = {};
+        this.text = '';
     }
     setId(id){
         this.id = id;
+    }
+
+    setText(text){
+        this.text = text;
     }
 
     addClasses(...classes){
@@ -50,6 +55,10 @@ class Element {
 
         if(this.id){
             el.id = this.id;
+        }
+
+        if(this.text){
+            el.textContent = this.text;
         }
 
         for(let c of this.classes){
