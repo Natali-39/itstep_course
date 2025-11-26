@@ -39,3 +39,14 @@ function renderBeerCard(beer) {
 window.onload = function() {
     renderBeerCard(beer); 
 };
+
+
+
+
+
+
+let response = fetch('https://punkapi.online/v3/beers/random');
+
+
+
+console.log(response);
