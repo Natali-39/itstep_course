@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import '../scss/index.scss';
 
+console.log(fetch("https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR,RUB,BYN"));
+
 let conn = new XMLHttpRequest();
 
 conn.onerror = function(){
@@ -36,17 +38,3 @@ function renderBeerCard(beer) {
 
 }
 
-window.onload = function() {
-    renderBeerCard(beer); 
-};
-
-
-
-
-
-
-let response = fetch('https://punkapi.online/v3/beers/random');
-
-
-
-console.log(response);
