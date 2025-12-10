@@ -24,4 +24,6 @@ let courses = {
 } 
 let inputs = [...document.querySelectorAll()]
 
-let converterCourses = function(inputs, )
+let converterCourses = function(inputs, element){
+    
+}
