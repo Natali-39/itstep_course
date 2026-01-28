@@ -3,6 +3,9 @@ import Button from "./Button";
 import Title from "./title";
 import Card from "./Card";
 import Counter from "./Counter";
+import Timer from "./Timer";
+import TextInput from "./TextInput";
+import LoginForm from "./LoginForm";
 
 const products = [
   {id: 1, name: 'Название товара1', image: 'https://i.pinimg.com/736x/25/52/81/25528187d8a32d1c998a63e3b301de86.jpg', titleText: 'Это был странный мир: по утрам за окном не пели птицы, не шелестела трава, собаки лаяли совершенно беззвучно, а мужики, то и дело ругающиеся на улицах, широко раскрывали рты, но ни единого звука оттуда не доносилось. В десять лет, после тяжело перенесённой скарлатины, Костя почти оглох, и вот уже шестой год его окружал мир тишины и покоя.'},
@@ -22,6 +25,9 @@ function App() {
 
   return (
     <>
+      <LoginForm />
+      <TextInput value={10} onChange={(event) => console.log(event.target.value)}/>
+      <Timer />
       <Counter />
       <Title level = {2} titleText={"Методичка"} />
       {tovary}
@@ -32,6 +38,7 @@ function App() {
       Текст — это зафиксированная на носителе или в устной речи последовательность предложений, объединенных общей темой, смысловой целостностью и логической последовательностью. Текст обладает заголовоком, характеризуется связностью и завершенностью, а также выполняет коммуникативную, познавательную или информационную функции. 
       </Paragraph>
       <Button label="Текст" handleClick={() => alert("Кнопка активна")} disabled={null}/>
+
     </>
   );
 }
