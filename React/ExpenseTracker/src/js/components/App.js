@@ -2,85 +2,96 @@ import {useState, useEffect} from 'react';
 
 import H1 from './headers/H1.js';
 
-/*
+const START_BALANCE = 1000;
+
 function uid() {
     return `${Date.now()}_${Math.random().toString(16).slice(2)}`;
 } //генерация уникального индификатора
 
 export default function App () {
-    const savedTasks = window.localStorage.getItem("tasks")
 
-    const [tasks, setTasks] = useState(savedTasks ? JSON.parse(savedTasks) : []);
-    const [text, setText] = useState("");
+    const savedFinances = window.localStorage.getItem("finance");
 
-    function addNewTask(event) {
+    let summ = savedFinances ? JSON.parse(savedFinances).reduce(function(accum, item){
+        return accum += parseFloat(item.amount);
+    }, START_BALANCE) : START_BALANCE;
+
+    const [date, setDate] = useState('');
+    const [description, setDescription] = useState('');
+    const [amount, setAmount] = useState(0);
+    const [total, setTotal] = useState(summ);
+
+    const [finances, setFinances] = useState(savedFinances ? JSON.parse(savedFinances) : []);
+
+    function add(event) {
         event.preventDefault();
-        /**
-         * {id: 212644, text: "задача 1", status: 1}
-         */
-        /*const newTasks = [
-            ...tasks,
-            {id: uid(), text: text, status: 0}
+
+        const newFinances = [
+            ...finances,
+            {id: uid(), date: date, description: description, amount: amount}
         ];
 
-        setTasks(newTasks);
+        setFinances(newFinances);
 
-        setText("");
+        let summ = newFinances.reduce(function(accum, item){
+            return accum += parseFloat(item.amount);
+        }, 0);
 
-    }
+        setTotal(summ);
 
-    function changeStatus(taskId) {
-        const newTasks = tasks.map((task) => {
-            if(task.id == taskId) {
-                task.status = !task.status;
-            }
-
-            return task;
-        });
-
-        setTasks(newTasks);
-
-    }
-
-    function deleteTask(taskId) {
-        if(confirm('Вы действительно хотите удалить задачу?')) {
-            const newTasks = tasks.filter((task) => {
-                return task.id != taskId;
-            });
-    
-            setTasks(newTasks);
-        }
+        setDate("");
+        setDescription("");
+        setAmount(0);
     }
 
     useEffect(() => {
-        window.localStorage.setItem("tasks", JSON.stringify(tasks));
-    }, [tasks]);
+        window.localStorage.setItem("finance", JSON.stringify(finances));
+    }, [finances]);
 
+    
     return(
         <>
-            <H1 headerText={"ToDo"} />
-            <form className="form" onSubmit={addNewTask}>
-                <input type="text" placeholder="Новая задача..." value={text} onChange = { (event) => setText(event.target.value) } />
-                <button id="btn" type="submit">Добавить</button>
+            <H1 headerText={"Трекер расходов"} />
+            <form className="track" onSubmit={add}>
+            <div className="expense">
+                <div className="date">
+                    <label for="">Дата</label>
+                    <input type="date" value={date} onChange={ (e) => setDate(e.target.value) }/>
+                </div>
+                <div className="discription">
+                    <label for="">Описание</label>
+                    <input type="text"value={description} onChange={ (e) => {setDescription(e.target.value)}}/>
+                </div>
+                <div className="summ">
+                    <label for="">Сумма</label>
+                    <input type="number" value={amount} onChange = { (e) => setAmount(e.target.value) }/>
+                </div>
+                <button className="btn-add">Добавить</button>
+            </div>
+            <div className="balance">
+                <label for="">Баланс</label>
+                <input type="number" className="total" value={total}/>
+                <button className="btn-bal">Установить сумму</button>
+            </div>
             </form>
             {
-                tasks.length > 0 ? 
+                fanance.length > 0 ? 
                 (<ul className="list">
                     {
-                        tasks.map(function(task) { 
+                        fanance.map(function(finance) { 
                             return(
-                                <li className="item" key={task.id}>
-                                    <input type="checkbox" checked={task.status} value="1" onChange={ () => {changeStatus(task.id)}} />
-                                    <span className={task.status ? "done" : null}>{task.text}</span>
-                                    <button onClick={() => {deleteTask(task.id)}} >&#10006;</button>
+                                <li className={finance.amount > 0 ? "item negative": "item negative"} key={finance.id} >
+                                    <span>{finance.date}</span>
+                                    <span>{finance.description}</span>
+                                    <span>{finance.amout} BYN</span>
                                 </li>
                                 )
                             }
                         )
                     }
-                </ul>) : "Список задач пустой"
+                </ul>) : <div className="empty">"Список расходов пока пустой"</div>
             }
             
         </>
     );
-}*/
+}

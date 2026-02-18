@@ -13,7 +13,38 @@ html, body{
     background-color: #9cd3ae;
 }
 .track {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+
+    & div {
+        margin: 10px;
+    }
+}
+.expense{
     display: flex;
     flex-direction: column;
+}
+.btn-add {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 0 auto;
+}
+.balance{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+
+    & .btn-bal{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 0 auto;
+    }
 }
 
