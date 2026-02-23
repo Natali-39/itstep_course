@@ -1,10 +1,10 @@
 //ОПЦИОНАЛЬНАЯ ЦЕПОЧКА
 
-let user = {
+/*let user = {
     address: {
         street: {}
     }
-};
+};*/
 
 // console.log(user.address ? user.address.street : null);
 //или
